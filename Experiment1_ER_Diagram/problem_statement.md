@@ -22,31 +22,33 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 - Payments tracked for memberships and sessions.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
+
+<img width="960" height="650" alt="image" src="https://github.com/user-attachments/assets/631bfe7b-3b48-44ba-bdb4-a47ce0023058" />
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+| Entity | Attributes (PK, FK)                | Notes   |
+|--------|--------------------                |----------|
+| User   |user_id (PK), name,mobile_no, address |Identifies the user.|  
+| Permission| per_id (PK), per_module, per_name|Defines permissions granted to the user.|       
+|Trainer| trainer_id (PK), name, mobile, email|Represents trainers managing the members.|      
+| Member|mem_id (PK), mem_type, mem_name, mem_mobile, mem_email| Represents gym members.|       
+| Fitness|fit_id (PK), fit_type, fit_desc|Defines the fitness programs.|          
+
 
 ### Relationships and Constraints
 
 | Relationship | Cardinality | Participation | Notes |
 |--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+|User - Permission|1:N|Mandatory (A user must have at least one permission) | A user can have multiple permissions.|     
+| User - Trainer| N:M|Optional (User may or may not be a trainer)| A user can manage many trainers and vice versa.|
+| Trainer - Fitness|1:N|Mandatory (A trainer must be associated with at least one fitness type)|Trainers manage fitness types.|
+|Member - Fitness|N:M|Optional (Members may or may not be associated with a fitness type)|A member can be associated with multiple fitness types.|
 
 ### Assumptions
-- 
-- 
-- 
+- Role-Based Access: Users have different roles (e.g., admin, trainer, member), with permissions assigned based on their role.
+- Trainer-Managed Programs: Trainers manage fitness programs, and members can join multiple fitness types, each guided by a trainer.
+- Flexible Member Participation: Members can participate in multiple fitness programs, with flexibility in the types and number of programs they join.
 
 ---
 
