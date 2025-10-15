@@ -61,77 +61,73 @@ where product_id=15 and sale_date='2023-01-31'
 
 **Question 2**
 ---
-<img width="635" height="362" alt="image" src="https://github.com/user-attachments/assets/86c10b91-e09d-4c02-a844-5f660ce5383c" />
+<img width="527" height="272" alt="image" src="https://github.com/user-attachments/assets/5da5fc45-e010-44fe-8483-7471bd75d4d5" />
 
 ```sql
-update PRODUCTS
-set reorder_lvl=40
-where category = 'Grocery'
+select CategoryName, Description from categories
+order by CategoryName
 ```
 
 **Output:**
 
-<img width="1335" height="325" alt="image" src="https://github.com/user-attachments/assets/d351a6c6-9676-4b59-8393-93c85a07c902" />
+<img width="849" height="349" alt="image" src="https://github.com/user-attachments/assets/0f70fb9b-d57d-4b37-8288-f54a7660bc55" />
 
 **Question 3**
 ---
-<img width="1070" height="579" alt="image" src="https://github.com/user-attachments/assets/3b56527b-c108-40a9-b561-0b859d16d137" />
+<img width="723" height="308" alt="image" src="https://github.com/user-attachments/assets/f70dc0e4-e041-4fd0-82a4-cfb6986f317c" />
 
 ```sql
-update Employees
-set salary=
-case
-when department_id=40 then salary*125/100
-when department_id=90 then salary*115/100
-when department_id=110 then salary*110/100
-else salary
-end
+select * from employeeposition
+where Salary between 50000 and 100000
 ```
 
 **Output:**
 
-<img width="941" height="341" alt="image" src="https://github.com/user-attachments/assets/552c3cd5-06bf-46fe-b24b-93499a29028c" />
+<img width="804" height="185" alt="image" src="https://github.com/user-attachments/assets/e5af5e33-22a9-4c0b-ac77-0c05c40c1165" />
 
 **Question 4**
 ---
-<img width="576" height="359" alt="image" src="https://github.com/user-attachments/assets/b54580b6-45c3-4d62-bb66-2ff16c983846" />
+<img width="1071" height="405" alt="image" src="https://github.com/user-attachments/assets/930462d2-3cfe-4e46-a1a4-6478ecef3b61" />
 
 ```sql
-update PRODUCTS
-set sell_price=sell_price*110/100
-where supplier_id=6
+select id,decimal, 
+case
+when decimal<50 then 'Below Average'
+when decimal=50 then 'Average'
+else 'Above Average'
+end as status
+from Calculations 
 ```
 
 **Output:**
 
-<img width="1307" height="420" alt="image" src="https://github.com/user-attachments/assets/bc0ec3d7-0628-46ae-a058-dbccc4d08da5" />
+<img width="687" height="324" alt="image" src="https://github.com/user-attachments/assets/833a3d2f-5cfe-4035-b373-f57188ea6566" />
 
 **Question 5**
 ---
-<img width="704" height="223" alt="image" src="https://github.com/user-attachments/assets/cb03ea28-f1ad-4ab8-820f-d98fc5b905c0" />
+<img width="1326" height="394" alt="image" src="https://github.com/user-attachments/assets/9ba9a21f-48ae-4c89-833f-d7f0ea827852" />
 
 ```sql
-update Products
-set sell_price=sell_price*1.10
-where category='Bakery'
+select * from salesman
+where city not in('Paris','Rome')
 ```
 
 **Output:**
 
-<img width="1317" height="405" alt="image" src="https://github.com/user-attachments/assets/4d1163d4-1879-48a6-bac0-575dcacc1a06" />
+<img width="712" height="311" alt="image" src="https://github.com/user-attachments/assets/b9b16852-a55f-4e23-a233-08a414b6a063" />
 
 **Question 6**
 ---
-<img width="1243" height="466" alt="image" src="https://github.com/user-attachments/assets/575f9cd2-a14b-4f40-ae6e-d2384f1803b1" />
+<img width="609" height="390" alt="image" src="https://github.com/user-attachments/assets/5427d83c-42e7-4b9b-a551-f3369c2a44e2" />
 
 ```sql
-delete from customer
-where OPENING_AMT between 4000 and 6000
+select id,value1, ABS(value1) as absolute_value
+from Calculations
 ```
 
 **Output:**
 
-<img width="1301" height="461" alt="image" src="https://github.com/user-attachments/assets/0580d063-6a1d-4f52-ae12-efb573a1fff9" />
+<img width="670" height="246" alt="image" src="https://github.com/user-attachments/assets/f236ed2c-db04-46b2-9e50-2882f41dcf71" />
 
 **Question 7**
 ---
