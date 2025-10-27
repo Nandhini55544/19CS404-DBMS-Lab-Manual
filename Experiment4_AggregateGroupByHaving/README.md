@@ -181,6 +181,7 @@ having AVG(age)<24;
 ```
 
 **Output:**
+
 <img width="626" height="312" alt="image" src="https://github.com/user-attachments/assets/43ab7580-f440-4149-91bc-97e9dbe0b65e" />
 
 
