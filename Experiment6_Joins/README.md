@@ -237,7 +237,7 @@ group by c.customer_id;
 
 **Output:**
 
-![Uploading image.png…]()
+<img width="1238" height="822" alt="image" src="https://github.com/user-attachments/assets/c6ebed8f-5835-447c-8c05-56d14600c00b" />
 
 
 ## RESULT
